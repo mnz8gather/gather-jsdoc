@@ -1,3 +1,9 @@
+// 定义类型 FunctionComponentExtra
+// FunctionComponentExtra 中 a b 为 string 类型, c 为可选的 string 类型
+// @component 声明为组件类型
+// 参数为 props, prop 类型为 React.HTMLProps<HTMLSpanElement> & FunctionComponentExtra
+// 返回 React.ReactElement 类型
+
 /**
  *
  * @typedef {Object} FunctionComponentExtra
@@ -12,7 +18,7 @@
  *
  */
 function FunctionComponent(props) {
-  const { a, b, c, ...spanProps } = props;
+  const {a, b, c, ...spanProps} = props;
   return (
     <span {...spanProps}>
       {a}
@@ -22,9 +28,7 @@ function FunctionComponent(props) {
   );
 }
 
-export { FunctionComponent };
-
-// 可以拆开
+// 可以拆开写
 /**
  * @typedef {Object} FunctionComponentAnotherWayExtra
  * @property {string} z
@@ -42,7 +46,7 @@ export { FunctionComponent };
 
 // 另一种写法，可以将类型拆开
 function FunctionComponentAnotherWay(props) {
-  const { z, y, x, ...spanProps } = props;
+  const {z, y, x, ...spanProps} = props;
   return (
     <span {...spanProps}>
       {z}
@@ -52,4 +56,4 @@ function FunctionComponentAnotherWay(props) {
   );
 }
 
-export { FunctionComponent, FunctionComponentAnotherWay };
+export {FunctionComponent, FunctionComponentAnotherWay};
