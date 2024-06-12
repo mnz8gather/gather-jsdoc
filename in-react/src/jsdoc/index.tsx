@@ -1,4 +1,4 @@
-import { FunctionComponent, FunctionComponentAnotherWay } from './jsx';
+import { FunctionComponent, FunctionComponentAnotherWay } from './write_in_jsx';
 
 function A() {
   return (
